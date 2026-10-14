@@ -1,9 +1,9 @@
-# Yanna-Feelss
+# Yanna Feels
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Heart</title>
     <style>
         * {
             box-sizing: border-box;
@@ -95,10 +95,7 @@
         <canvas id="heartCanvas" width="800" height="800"></canvas>
     </div>
 
-    <!-- Romantic Background Instrumental Track -->
-    <audio id="bg-music" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    </audio>
+    
 
 <script>
     const lockScreen = document.getElementById('lock-screen');
@@ -106,7 +103,6 @@
     const errorMsg = document.getElementById('error-msg');
     const container = document.getElementById('canvas-container');
     const canvas = document.getElementById('heartCanvas');
-    const audio = document.getElementById('bg-music');
     const ctx = canvas.getContext('2d');
 
     // Automatically put cursor in input box
@@ -119,11 +115,6 @@
             lockScreen.style.opacity = '0';
             
             // Try to play audio immediately upon passcode entry interaction
-            try {
-                audio.play().catch(e => console.log("Audio play caught:", e));
-            } catch(err) {
-                console.log("Audio play failed:", err);
-            }
 
             setTimeout(() => {
                 lockScreen.style.display = 'none';
